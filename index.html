@@ -1,0 +1,686 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Odo festival</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,700;12..96,800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+     /* Le conteneur de la vidéo */
+    .video-background {
+      position: fixed;        /* fixé par rapport à la fenêtre */
+      top: 0;
+      left: 0;
+      width: 100vw;          /* toute la largeur */
+      height: 100vh;         /* toute la hauteur */
+      overflow: hidden;
+      z-index: -1;           /* derrière le contenu */
+    }
+
+    /* La vidéo elle-même */
+    .video-background video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;     /* couvre tout l'écran sans déformer */
+    }
+
+  </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-logo"><em>ODO</em> FESTIVAL</div>
+      <div class="hero-pre">Organisé par Face au Célibat Podcast</div>
+      <ul class="nav-links">
+        <li><a href="#concept">Concept</a></li>
+        <li><a href="#activites">Activités</a></li>
+        <li><a href="#programme">Programme</a></li>
+        <li><a href="#billets">Billets</a></li>
+        <li><a href="#billets" class="nav-cta">Réserver</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO avec vidéo YouTube embed -->
+    <section class="hero">
+      <!--<div class="hero-vid-wrap">
+        <iframe
+          src="images/odo-teaser1.mp4"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+        ></iframe>-->
+        <div class="video-background">
+          <video autoplay muted loop playsinline>
+            <source src="images/odo-teaser1.mp4" type="video/mp4">
+            <!-- Ajoute d'autres formats pour compatibilité -->
+            <source src="votre-video.webm" type="video/webm">
+            <source src="votre-video.ogg" type="video/ogg">
+            Votre navigateur ne supporte pas la vidéo.
+          </video>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-overlay2"></div>
+      <div class="hero-content">
+        <div class="hero-row">
+          <div>
+            <!--<div class="hero-pre">Organisé par Face au Célibat Podcast</div>-->
+            <h1 class="hero-h1">
+              <span class="r">ODO</span><br /><span class="stroke"
+                >FESTIVAL</span
+              >
+            </h1>
+            <div class="hero-tagline">LOMÉ · TOGO · 15 AOÛT 2026</div>
+            <div class="hero-meta">
+              <div class="hm">
+                <span class="hm-l">Date</span
+                ><span class="hm-v">15 <span>AOÛT</span> 2026</span>
+              </div>
+              <div class="hm">
+                <span class="hm-l">Lieu</span
+                ><span class="hm-v">PARC KEUR JOSEL <span>AVENOU</span></span>
+              </div>
+              <div class="hm">
+                <span class="hm-l">À partir de</span
+                ><span class="hm-v">8 000 <span>FCFA</span></span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-btns">
+            <a href="https://payzyapp.com/events/details/415" class="btn-big">🎟 Prendre ma place</a>
+            <a href="#activites" class="btn-ghost">Découvrir →</a>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-hint">
+        <div class="s-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="mq">
+      <div class="mq-track">
+        <div class="mq-item">ODO FESTIVAL <span class="mq-sep">✦</span></div>
+        <div class="mq-item dim">
+          SPEED DATING <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item">
+           JEUX & CHALLENGES <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item dim">
+          BAL DE CLÔTURE <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item">
+          LOMÉ · 15 AOÛT 2026 <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item dim">
+          RENCONTRES · AMOUR · CONNEXIONS <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item">ODO FESTIVAL <span class="mq-sep">✦</span></div>
+        <div class="mq-item dim">
+          SPEED DATING <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item">
+          JEUX & CHALLENGES <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item dim">
+          BAL DE CLÔTURE <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item">
+          LOMÉ · 15 AOÛT 2026 <span class="mq-sep">✦</span>
+        </div>
+        <div class="mq-item dim">
+          RENCONTRES · AMOUR · CONNEXIONS <span class="mq-sep">✦</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CONCEPT -->
+    <section id="concept">
+      <div class="sec">
+        <div class="concept-grid reveal">
+          <div>
+            <div class="sec-lbl">Le Concept</div>
+            <h2 class="sec-h">
+              ODO c'est<br /><span style="color: var(--r)">Amour</span><br />en
+              Akan.
+            </h2>
+            <p class="sec-p">
+              ODO Festival célèbre le célibat non comme une attente, mais comme
+              une aventure. Une nuit pensée pour créer de vraies connexions —
+              amitié, amour, réseau — dans une ambiance africaine, festive et
+              sincère.
+            </p>
+            <div class="stats">
+              <div class="stat">
+                <div class="stat-n">
+                  200<span style="color: var(--o); font-size: 2rem">+</span>
+                </div>
+                <div class="stat-l">Participants</div>
+              </div>
+              <div class="stat">
+                <div class="stat-n" style="color: var(--o)">6</div>
+                <div class="stat-l">Activités</div>
+              </div>
+              <div class="stat">
+                <div class="stat-n" style="color: var(--y)">1</div>
+                <div class="stat-l">Nuit inoubliable</div>
+              </div>
+            </div>
+            <div
+              style="
+                margin-top: 2.5rem;
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a href="https://payzyapp.com/events/details/415" class="btn-big">Je réserve</a>
+              <a href="#activites" class="btn-ghost">Le programme →</a>
+            </div>
+          </div>
+          <div class="mosaic">
+            <div class="mosaic-big">
+              <div  class="photo-placeholder ph1">
+                <img  style="width: 100%; height: 100%; ; " src="images/ambiance_odo.jpg" />
+                <!--<div class="photo-overlay-txt">AMBIANCE ODO FESTIVAL</div>-->
+                
+              </div>
+              <div class="mosaic-cap">L'ambiance ODO Festival</div>
+            </div>
+            <div class="mosaic-sm">
+              <div class="photo-placeholder ph2"><img  style="width: 100%; height: 100%; ; " src="images/5p.jpeg" /></div>
+              <div class="mosaic-cap">Rencontres</div>
+            </div>
+            <div class="mosaic-sm">
+              <div class="photo-placeholder ph3"><img  style="width: 100%; height: 100%; ; " src="images/6p.jpeg" /></div>
+              <div class="mosaic-cap">Célébration</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVITÉS -->
+    <section class="acts-bg" id="activites">
+      <div class="acts-inner">
+        <div class="acts-header reveal">
+          <div>
+            <div class="sec-lbl" style="color: var(--r)">
+              <span
+                style="
+                  background: var(--r);
+                  width: 18px;
+                  height: 2px;
+                  display: block;
+                "
+              ></span
+              >Activités
+            </div>
+            <h2 class="sec-h" style="color: var(--dk); margin-bottom: 0">
+              Ce qui t'attend<br />cette nuit-là.
+            </h2>
+          </div>
+          <p
+            style="
+              font-size: 1rem;
+              font-weight: 300;
+              color: rgba(10, 6, 4, 0.55);
+              line-height: 1.8;
+              max-width: 380px;
+            "
+          >
+            Une progression narrative — de l'ice breaker à la piste de danse.
+            Chaque moment prépare le suivant.
+          </p>
+        </div>
+        <div class="acts-grid reveal">
+          <div class="act">
+            <div class="act-n">01</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/affinite.png" /></div>
+            <div class="act-name">Marché aux Affinités</div>
+            <div class="act-desc">
+              5 gommettes. Des catégories lancées. Sans parler, tu choisis — et
+              on te choisit. Premières connexions garanties.
+            </div>
+            <!--<span class="act-badge b-all">Tous les pass</span>-->
+          </div>
+          <div class="act">
+            <div class="act-n">02</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/jeu_role.png" /></div>
+            <div class="act-name">Jeux de Rôle ODO</div>
+            <div class="act-desc">
+              Des Cartes de Situation. Duos tournants. Tu joues un rôle 2
+              minutes et tu oublies d'avoir peur de l'inconnu.
+            </div>
+            <!--<span class="act-badge b-all">Tous les pass</span>-->
+          </div>
+          <div class="act">
+            <div class="act-n">03</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/speed_dating.png" /></div>
+            <div class="act-name">Speed Dating</div>
+            <div class="act-desc">
+              25 tables. 8 rotations de 5 minutes. Groupes pré-matchés selon ton
+              profil d'inscription. Carnet ODO fourni.
+            </div>
+            <!--<span class="act-badge b-prem">Pass Premium</span>-->
+          </div>
+          <div class="act">
+            <div class="act-n">04</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/anonyme.png" /></div>
+            <div class="act-name">Déclaration Anonyme</div>
+            <div class="act-desc">
+              Une boîte. Tu écris ce que tu n'oses pas dire. À 21h30, on lit
+              tout à voix haute. Personne ne sait que c'est toi.
+            </div>
+            <!--<span class="act-badge b-all">Tous les pass</span>-->
+          </div>
+          <div class="act">
+            <div class="act-n">05</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/feu.png" /></div>
+            <div class="act-name">Contes autour du Feu</div>
+            <div class="act-desc">
+              Le feu. Le cercle. Un conteur professionnel. Histoires d'amour
+              africaines. Le moment le plus puissant de la nuit.
+            </div>
+            <!--<span class="act-badge b-all">Tous les pass</span>-->
+          </div>
+          <div class="act">
+            <div class="act-n">06</div>
+            <div class="act-ic"><img  style="width: 50%; height: 100%;  " src="images/bal_cloture.png" /></div>
+            <div class="act-name">Bal de Clôture</div>
+            <div class="act-desc">
+              DJ set. Afrobeat, Highlife, Zouk, Slow, sons traditionnels. La
+              piste ouverte jusqu'à la dernière note à 02h00.
+            </div>
+            <!--<span class="act-badge b-all">Tous les pass</span>-->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO STRIP -->
+    <div class="strip reveal">
+      <div class="strip-item">
+        <div class="strip-img photo-placeholder ph1" style="font-size: 4rem">
+          <img style="width: 100%; height: 100%;" src="images/date_deroulant.jpg" />
+        </div>
+        <div class="strip-lbl">Speed Dating</div>
+      </div>
+      <!--<div class="strip-item">
+        <div class="strip-img photo-placeholder ph4" style="font-size: 4rem">
+          🔥
+        </div>
+        <div class="strip-lbl">Contes du Feu</div>
+      </div>-->
+      <div class="strip-item">
+        <div class="strip-img photo-placeholder ph2" style="font-size: 4rem">
+          <img style="width: 100%; height: 100%;" src="images/groupe_personne.jpg" />
+        </div>
+        <div class="strip-lbl">Jeux & Matchs</div>
+      </div>
+      <div class="strip-item">
+        <div class="strip-img photo-placeholder ph5" style="font-size: 4rem">
+          <img style="width: 100%; height: 100%;" src="images/personne_soiree.jpg" />
+        </div>
+        <div class="strip-lbl">Bal de Clôture</div>
+      </div>
+    </div>
+
+    <!-- BRACELETS -->
+    <section class="brac-bg" id="bracelets">
+      <div class="brac-inner reveal">
+        <div>
+          <div class="sec-lbl">Système de bracelets</div>
+          <h2 class="sec-h">
+            Ton bracelet<br />parle<br /><span style="color: var(--r)"
+              >pour toi.</span
+            >
+          </h2>
+          <p class="sec-p">
+            À ODO Festival, la couleur de ton bracelet crée une lecture
+            immédiate de l'espace social. Sans malaise, sans pression, sans
+            question gênante.
+          </p>
+        </div>
+        <div class="brac-grid">
+          <div class="bc bc-r">
+            <div class="bc-strip" style="background: #e8001c"></div>
+            <div class="bc-name" style="color: #e8001c">Rouge</div>
+            <div class="bc-sub">Flamme</div>
+            <div class="bc-desc">
+              Célibataire, prêt(e) à rencontrer quelqu'un. Tu es ouvert(e) et là
+              pour ça.
+            </div>
+          </div>
+          <div class="bc bc-o">
+            <div class="bc-strip" style="background: #f47920"></div>
+            <div class="bc-name" style="color: #f47920">Orange</div>
+            <div class="bc-sub">Libre</div>
+            <div class="bc-desc">
+              Célibataire, là pour s'amuser sans pression romantique. Fous rires
+              avant tout.
+            </div>
+          </div>
+          <div class="bc bc-p">
+            <div class="bc-strip" style="background: #7f77dd"></div>
+            <div class="bc-name" style="color: #7f77dd">Violet</div>
+            <div class="bc-sub">Âme Sœur</div>
+            <div class="bc-desc">
+              En quête d'amitié sincère. Pas de romantisme — de vraies
+              connexions profondes.
+            </div>
+          </div>
+          <div class="bc bc-g">
+            <div class="bc-strip" style="background: #1d9e75"></div>
+            <div class="bc-name" style="color: #1d9e75">Vert</div>
+            <div class="bc-sub">Complice</div>
+            <div class="bc-desc">
+              En couple, là pour vivre et partager. ODO Festival est pour vous
+              aussi.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMME + VIDÉO -->
+    <section class="prog-bg" id="programme">
+      <div class="prog-inner">
+        <div class="prog-vis reveal">
+          <div class="sec-lbl" style="color: var(--r)">
+            <span
+              style="
+                background: var(--r);
+                width: 18px;
+                height: 2px;
+                display: block;
+              "
+            ></span
+            >Atmosphère
+          </div>
+          <h2 class="sec-h" style="color: var(--dk)">
+            L'ambiance<br /><span style="color: var(--r)">ODO.</span>
+          </h2>
+          <!-- Vidéo YouTube embed -->
+          <div class="prog-vid-wrap"> 
+            
+            <iframe 
+              src="images/odo-teaser.mp4"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+              "
+              allowfullscreen
+              title="Ambiance ODO Festival"
+            ></iframe>
+          </div>
+          <div
+            style="
+              margin-top: 0.8rem;
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+              gap: 0.8rem;
+            "
+          >
+            <div
+              class="photo-placeholder ph3"
+              style="height: 130px; border-radius: 3px; font-size: 2.5rem"
+            >
+              <img style="width: 100%; height: 100%;" src="images/2Ap.jpeg" />
+            </div>
+            <div
+              class="photo-placeholder ph6"
+              style="height: 130px; border-radius: 3px; font-size: 2.5rem"
+            >
+              <img style="width: 100%; height: 100%;" src="images/8p.jpeg" />
+            </div>
+          </div>
+        </div>
+        <div class="reveal">
+          <div class="sec-lbl" style="color: var(--r)">
+            <span
+              style="
+                background: var(--r);
+                width: 18px;
+                height: 2px;
+                display: block;
+              "
+            ></span
+            >Programme
+          </div>
+          <h2 class="sec-h" style="color: var(--dk)">
+            Ta soirée,<br />minute par<br /><span style="color: var(--r)"
+              >minute.</span
+            >
+          </h2>
+          <div class="tl">
+            <div class="tl-r">
+              <div class="tl-t">17h00</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Ouverture des portes</div>
+                <div class="tl-cdesc">
+                  Accueil, bracelets, photocall. Jeux traditionnels en libre
+                  accès.
+                </div>
+              </div>
+            </div>
+            <div class="tl-r">
+              <div class="tl-t">18h30</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Ice Breaker — Marché aux Affinités</div>
+                <div class="tl-cdesc">
+                  Les premières connexions commencent sans pression.
+                </div>
+              </div>
+            </div>
+            <div class="tl-r">
+              <div class="tl-t">19h00</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Jeux de Rôle ODO</div>
+                <div class="tl-cdesc">
+                  Cartes de Situation. Duos tournants. La glace est cassée.
+                </div>
+              </div>
+            </div>
+            <div class="tl-r">
+              <div class="tl-t">19h15</div>
+              <div class="tl-c" style="border-left: 3px solid var(--r)">
+                <div class="tl-ctitle">Speed Dating — Sessions</div>
+                <div class="tl-cdesc">
+                  Groupes pré-matchés. 8 rotations de 5 min. Cartes défi. Pass
+                  Premium.
+                </div>
+              </div>
+            </div>
+            <div class="tl-r">
+              <div class="tl-t">20h30</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Déclaration Anonyme</div>
+                <div class="tl-cdesc">
+                  La boîte est ouverte. Ton mot sera lu ce soir.
+                </div>
+              </div>
+            </div>
+            <!--<div class="tl-r">
+              <div class="tl-t">21h00</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Contes autour du Feu</div>
+                <div class="tl-cdesc">
+                  Le cercle. Un conteur. Histoires africaines. Déclarations lues
+                  à 21h50.
+                </div>
+              </div>
+            </div>-->
+            <div class="tl-r">
+              <div class="tl-t">22h00</div>
+              <div class="tl-c accent">
+                <div class="tl-ctitle">Bal de Clôture</div>
+                <div class="tl-cdesc">
+                  DJ set. Afrobeat · Highlife · Zouk · Slow. Jusqu'à 02h00.
+                </div>
+              </div>
+            </div>
+            <div class="tl-r">
+              <div class="tl-t">01h45</div>
+              <div class="tl-c">
+                <div class="tl-ctitle">Clôture & Annonce ODO 2027</div>
+                <div class="tl-cdesc">
+                  Le dernier mot. La photo de groupe. La promesse de se
+                  retrouver.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BILLETS -->
+    <section class="tix-bg" id="billets">
+      <div class="tix-inner">
+        <div class="tix-header reveal">
+          <div>
+            <div class="sec-lbl">Billetterie</div>
+            <h2 class="sec-h">
+              Choisis ton<br /><span style="color: var(--o)">expérience.</span>
+            </h2>
+          </div>
+          
+        </div>
+        <div class="tix-grid reveal">
+          
+          <div class="tix tix-prem">
+            <span class="tix-hot">Recommandé</span>
+            <div class="tix-type">Expérience complète</div>
+            <div class="tix-price" style="color: var(--o)">
+              8 000 <sub>FCFA</sub>
+            </div>
+            <div class="tix-name">Pass Premium</div>
+            <div class="tix-sep"></div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Tout le Pass Simple
+            </div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Speed Dating officiel (pré-matché)
+            </div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Atelier ODO — Déclaration Anonyme
+            </div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Kit ODO — carnet + goodies
+              surprise
+            </div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Accès Studio Face au Célibat
+            </div>
+            <div class="tix-f">
+              <span class="tix-tick">✓</span> Accueil prioritaire
+            </div>
+            <a href="https://payzyapp.com/events/details/415" class="tix-btn tix-btn-p"
+              >Réserver · (+228) 70019111</a
+            >
+          </div>
+          
+        </div>
+        <div class="packs-wrap reveal">
+          <div class="sec-lbl">Packs Groupe</div>
+          <div class="packs-title">Venez à plusieurs.</div>
+          <div class="packs-grid">
+            <div class="pack">
+              <div class="pack-ic">🎟</div>
+              <div class="pack-n"> PACK FIVE</div>
+              <div class="pack-np">5 personnes</div>
+              <div class="pack-pr">37 500 FCFA</div>
+              <div class="pack-ps">7 500 FCFA / pers.</div>
+              <div class="pack-f"><span class="ar">→</span> Goodies</div>
+              <div class="pack-f">
+                <span class="ar">→</span> Économie 5 000 FCFA
+              </div>
+            </div>
+            
+            <div
+              class="pack"
+              style="
+                border-color: rgba(255, 195, 0, 0.15);
+                background: linear-gradient(
+                  135deg,
+                  rgba(255, 195, 0, 0.04),
+                  transparent
+                );
+              "
+            >
+              <div class="pack-ic">👑</div>
+              <div class="pack-n">VIP Crew</div>
+              <div class="pack-np">10 personnes</div>
+              <div class="pack-pr" style="color: var(--y)">70 000 FCFA</div>
+              <div class="pack-ps">7 000 FCFA / pers.</div>
+              <div class="pack-f">
+                <span class="ar">→</span> Économie de 10 000 FCFA
+              </div>
+              <div class="pack-f">
+                <span class="ar">→</span> 1 Champagne offert
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-sec">
+      <div class="cta-bg-vis"><div class="cta-pattern"></div></div>
+      <div class="cta-ov"></div>
+      <div class="cta-c reveal">
+        <div class="sec-lbl" style="justify-content: center">
+          Le 15 Août à Lomé
+        </div>
+        <h2 class="cta-h">
+          Et si c'était<br /><span class="r">ce soir-là ?</span>
+        </h2>
+        <p class="cta-p">
+          Les meilleures histoires commencent par un simple moment de
+          complicité. ODO Festival est cet endroit.
+        </p>
+        <a
+          href="https://payzyapp.com/events/details/415"
+          class="btn-big"
+          style="margin: 0 auto; font-size: 0.95rem; padding: 1.1rem 3rem"
+          >🎟 Je prends ma place maintenant</a
+        >
+        <div class="cta-contacts">
+          <div class="cc">
+            <span class="cc-l">Réseaux</span
+            ><span class="cc-v">@festivalodo</span>
+          </div>
+          <div class="cc">
+            <span class="cc-l">WhatsApp</span
+            ><span class="cc-v">(+228) 70019111</span>
+          </div>
+          <div class="cc">
+            <span class="cc-l">Infoline</span
+            ><span class="cc-v">96 73 02 89</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="ft-logo"><em>ODO</em> FESTIVAL · LOMÉ 2026</div>
+      <div class="ft-copy">
+        © 2026 Face au Célibat Podcast. Tous droits réservés.
+      </div>
+      <div class="ft-social">@festivalodo</div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
