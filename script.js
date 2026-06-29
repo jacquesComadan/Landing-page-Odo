@@ -14,3 +14,29 @@ const obs = new IntersectionObserver(
   { threshold: 0.1 },
 );
 document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
+
+/**/
+ const menuToggle = document.getElementById('menuToggle');
+    const navbar = document.getElementById("nav");
+    const overlay = document.getElementById('overlay');
+
+    menuToggle.addEventListener('click', function() {
+      navbar.classList.toggle('open');
+      overlay.classList.toggle('show');
+      menuToggle.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', function() {
+      navbar.classList.remove('open');
+      overlay.classList.remove('show');
+      menuToggle.classList.remove('active');
+    });
+    // Ajoute à chaque lien du menu
+document.querySelectorAll('.nav ul li a').forEach(link => {
+  link.addEventListener('click', function() {
+    navbar.classList.remove('open');
+    overlay.classList.remove('show');
+    menuToggle.classList.remove('active');
+  });
+});
+  /**/

@@ -22,7 +22,7 @@ body {
 }
 
 nav {
-  position: fixed;
+  /*position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -31,7 +31,19 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  transition: background 0.4s;
+  transition: background 0.4s;*/
+
+  position: fixed;
+      top: 0;
+      left: -280px;
+      width: 280px;
+      height: 100vh;
+      background: var(--dk);
+      align-items: center;
+      padding-top: 80px;
+      transition: left 0.4s ease;
+      z-index: 999;
+      
 }
 nav.scrolled {
   background: rgba(10, 6, 4, 0.97);
@@ -42,6 +54,7 @@ nav.scrolled {
   font-size: 1.9rem;
   letter-spacing: 0.06em;
   color: var(--wh);
+  margin-left: 10%;
   
 }
 .nav-logo em {
@@ -52,7 +65,8 @@ nav.scrolled {
   display: flex;
   gap: 2rem;
   list-style: none;
-  align-items: center;
+  margin-left: 10%;
+  flex-direction: column;
 }
 .nav-links a {
   color: rgba(250, 246, 240, 0.55);
@@ -75,6 +89,7 @@ nav.scrolled {
 .nav-cta:hover {
   background: var(--o) !important;
 }
+
 
 /* HERO */
 .hero {
@@ -152,25 +167,26 @@ nav.scrolled {
   width: 100%;
 }
 .hero-pre {
-  font-size: 0.7rem;
+  font-size: 0.5rem;
   font-weight: 600;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--o);
   margin-bottom: 0.8rem;
+  margin-left: 10%;
   display: flex;
   align-items: center;
   gap: 0.8rem;
   opacity: 0;
   animation: fup 0.7s 0.3s forwards;
 }
-.hero-pre::before {
+/*.hero-pre::before {
   content: "";
   width: 22px;
   height: 1px;
   background: var(--o);
   display: block;
-}
+}*/
 h1.hero-h1 {
   font-family: "Bebas Neue", sans-serif;
   font-size: clamp(5.5rem, 16vw, 14rem);
@@ -1206,3 +1222,75 @@ footer {
     opacity: 1;
   }
 }
+/**/
+/* BOUTON */
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      width: 50px;
+      height: 50px;
+      background: #333;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .menu-toggle span {
+      display: block;
+      width: 30px;
+      height: 3px;
+      background: white;
+      border-radius: 3px;
+      transition: 0.3s;
+    }
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(45deg) translate(6px, 6px);
+    }
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* MENU */
+    /*.navbar {
+      position: fixed;
+      top: 0;
+      left: -280px;
+      width: 280px;
+      height: 100vh;
+      background: #1a1a2e;
+      padding-top: 80px;
+      transition: left 0.4s ease;
+      z-index: 999;
+    }*/
+
+    .nav.open {
+      left: 0;
+    }
+
+    /* OVERLAY */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0,0,0,0.5);
+      z-index: 998;
+      display: none;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+/**/
