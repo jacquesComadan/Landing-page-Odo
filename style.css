@@ -845,7 +845,7 @@ h1.hero-h1 {
   gap: 1.5rem;
   margin-bottom: 1.3rem;
   align-items: start;
-  width: 350px;
+  width: 310px;
 }
 .tl-t {
   font-family: "Bebas Neue", sans-serif;
@@ -1046,9 +1046,9 @@ h1.hero-h1 {
   transform: translateY(-1px);
 }
 .tix-hot {
-  position: absolute;
+  position :relative;
   top: 1.3rem;
-  right: 1.3rem;
+  right: -9.3rem;
   background: var(--o);
   color: var(--dk);
   font-size: 0.6rem;
@@ -1086,6 +1086,7 @@ h1.hero-h1 {
 .pack:hover {
   border-color: var(--o);
   transform: translateY(-3px);
+  box-shadow: 0 18px 55px rgba(244, 121, 32, 0.18)
 }
 .pack-ic {
   font-size: 1.5rem;
