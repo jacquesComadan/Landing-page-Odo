@@ -1347,3 +1347,9 @@ footer {
       display: block;
     }
 /**/
+
+.map iframe {
+  height: 500px;
+  border-radius: 10px;
+  box-shadow: #292727 0px 0px 10px;
+}
