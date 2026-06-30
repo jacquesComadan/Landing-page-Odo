@@ -31,6 +31,7 @@ document.querySelectorAll(".reveal").forEach((el) => obs.observe(el));
       overlay.classList.remove('show');
       menuToggle.classList.remove('active');
     });
+    /*
     // Ajoute à chaque lien du menu
 document.querySelectorAll('.nav ul li a').forEach(link => {
   link.addEventListener('click', function() {

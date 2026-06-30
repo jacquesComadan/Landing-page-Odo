@@ -1123,22 +1123,22 @@ h1.hero-h1 {
 .pack-f .ar {
   color: var(--o);
 }
-/* Localisation */
+/* Localisation 
 .map-container {
-  max-width: 300px;       /* largeur maximale */
-  margin: 10px auto;      /* centré avec marges */
-  border: 2px solid #ccc; /* bordure grise */
-  border-radius: 20px;    /* coins arrondis */
-  overflow: hidden;       /* masque tout débordement */
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15); /* ombre douce */
+  max-width: 300px;       // largeur maximale 
+  margin: 10px auto;      // centré avec marges 
+  border: 2px solid #ccc; // bordure grise 
+  border-radius: 20px;    // coins arrondis 
+  overflow: hidden;       // masque tout débordement 
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);  ombre douce 
 }
 
 .map-container iframe {
-  width: 100%;            /* occupe toute la largeur */
-  height: 400px;          /* hauteur fixe */
-  border: none;           /* supprime la bordure par défaut */
+  width: 100%;            // occupe toute la largeur
+  height: 400px;          // hauteur fixe 
+  border: none;           // supprime la bordure par défaut
 }
-
+*/
 
 /* CTA FINAL */
 .cta-sec {
