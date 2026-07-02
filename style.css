@@ -1057,6 +1057,14 @@ h1.hero-h1 {
   text-transform: uppercase;
   padding: 0.28rem 0.75rem;
   border-radius: 2px;
+  text-align: center;
+  width: 150px;
+}
+@media(min-width: 1024px) {
+  .tix-hot {
+    right: -6.3rem;
+  }
+
 }
 
 /* PACKS */
@@ -1082,6 +1090,9 @@ h1.hero-h1 {
   transition:
     border-color 0.3s,
     transform 0.3s;
+     flex: 1;
+      display: flex;
+      flex-direction: column;
 }
 .pack:hover {
   border-color: var(--o);
@@ -1365,7 +1376,23 @@ footer {
 /**/
 
 .map iframe {
-  height: 500px;
+  height: 200px;
+  width: 300px;
   border-radius: 10px;
   box-shadow: #292727 0px 0px 10px;
 }
+
+@media (min-width: 1024px) {
+.map iframe {
+  height: 500px;
+  width: 500px;
+}
+.last2 {
+  margin-bottom: 30px;
+}
+.last1 {
+  margin-bottom: 50px;
+}
+
+}
+
