@@ -1058,13 +1058,17 @@ h1.hero-h1 {
   padding: 0.28rem 0.75rem;
   border-radius: 2px;
   text-align: center;
-  width: 150px;
+  width: 120px;
 }
 @media(min-width: 1024px) {
   .tix-hot {
     right: -6.3rem;
   }
-
+}
+@media(max-width: 780px) {
+  .tix-hot {
+    right: -5.3rem;
+  }
 }
 
 /* PACKS */
